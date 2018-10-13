@@ -63,17 +63,20 @@
             if (chosen.length === itemCount) {
                 $submit.addClass('ready-show');
                 $submit.click(function () {
-                    return scoreNormal();
+                    document.getElementById('notifsuccess').style.display = "block";
+                    var sc = scoreNormal();
+                    if (sc.scoreint > 70) { document.getElementById('notifsuccess').style.display = "block"; }
+                    return sc;
                 });
             }
         }
 
         function scoreNormal() {
 
-            var isAuth = ('{{ user.isauthenticated}}');
             var wrong = [],
                 score = null,
-                $scoreEl = $('#emc-score');
+                scoreint = 0;
+            $scoreEl = $('#emc-score');
 
             for (var i = 0; i < itemCount; i++) {
                 if (chosen[i] != settings.key[i]) {
@@ -92,13 +95,10 @@
                 }
             });
 
-            score = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100 + "%";
+            scoreint = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100;
+            score = scoreint + "%";
             $scoreEl.text("You scored a " + score).addClass('new-score');
-            if (score > 70) { document.getElementById('notifsuccess').style.display = "block"; }
             $('html,body').animate({ scrollTop: 0 }, 50);
-        }
-
-        function showNotif() {
 
         }
     }
