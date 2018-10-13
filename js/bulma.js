@@ -7,3 +7,6 @@ window.onload = () => {
         }
     })
 }
+
+var notifications = new Notifications();
+notifications.init();

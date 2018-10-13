@@ -7,7 +7,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/quiz1.css">
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel='stylesheet' href='https://unpkg.com/simple-notifications-solution@1.0.0/dist/Notifications.css'>
 </head>
 
 <body>
@@ -42,12 +43,20 @@
         </div>
     </div>
 
+    <p class="notification is-danger" role="alert">Errors happen. And it happened again.<button class="delete" type="button">Close</button></p>
+    <p data-close="self" class="notification is-info" role="alert">You've just found what you were looking for!</p>
+    <p class="notification is-success" role="alert">You rock! Don't forget it! <button class="delete" type="button">Close</button></p>
+    <p data-close="self" class="notification is-warning" role="alert">Weather warnings for strong winds and
+        rain!</p>
+
     <footer>
         <div id="emc-progress"></div>
     </footer>
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://unpkg.com/simple-notifications-solution/dist/Notifications.js'></script>
     <script src="js/quiz1.js"></script>
+    <script src="js/bulma.js"></script>
 
 </body>
 
