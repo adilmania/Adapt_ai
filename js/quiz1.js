@@ -65,7 +65,7 @@
                 $submit.click(function () {
                     document.getElementById('notifsuccess').style.display = "block";
                     var sc = scoreNormal();
-                    if (sc.scoreint > 70) { document.getElementById('notifsuccess').style.display = "block"; }
+                    if (sc.scoreint > 50) { document.getElementById('notifsuccess').style.display = "block"; }
                     return sc;
                 });
             }
