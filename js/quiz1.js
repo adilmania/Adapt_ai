@@ -69,18 +69,24 @@
         }
 
         function scoreNormal() {
+
+            var isAuth = ('{{ user.isauthenticated}}');
             var wrong = [],
                 score = null,
                 $scoreEl = $('#emc-score');
+
             for (var i = 0; i < itemCount; i++) {
                 if (chosen[i] != settings.key[i]) {
                     wrong.push(i);
                 }
             }
+
             $quizItems.each(function (index) {
                 var $this = $(this);
                 if ($.inArray(index, wrong) !== -1) {
                     $this.removeClass('item-correct').addClass('item-incorrect');
+                    document.getElementById('notif4').style.display = "block";
+                    // $(".notification").hide();
                 } else {
                     $this.removeClass('item-incorrect').addClass('item-correct');
                 }
@@ -91,6 +97,9 @@
             $('html,body').animate({ scrollTop: 0 }, 50);
         }
 
+        function showNotif() {
+
+        }
     }
 }(jQuery));
 
