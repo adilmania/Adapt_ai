@@ -94,6 +94,7 @@
 
             score = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100 + "%";
             $scoreEl.text("You scored a " + score).addClass('new-score');
+            if (score > 70) { document.getElementById('notifsuccess').style.display = "block"; }
             $('html,body').animate({ scrollTop: 0 }, 50);
         }
 
