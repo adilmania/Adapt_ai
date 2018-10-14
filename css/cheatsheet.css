@@ -1,3 +1,11 @@
+.assitant_fixed {
+  background-color: red;
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+}
+
+
 body,
 html {
   background: #f2f2f2;
