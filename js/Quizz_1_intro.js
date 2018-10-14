@@ -63,34 +63,44 @@
             if (chosen.length === itemCount) {
                 $submit.addClass('ready-show');
                 $submit.click(function () {
-                    return scoreNormal();
+                    document.getElementById('notifsuccess').style.display = "block";
+                    var sc = scoreNormal();
+                    if (sc.scoreint > 50) { document.getElementById('notifsuccess').style.display = "block"; }
+                    return sc;
                 });
             }
         }
 
         function scoreNormal() {
+
             var wrong = [],
                 score = null,
-                $scoreEl = $('#emc-score');
+                scoreint = 0;
+            $scoreEl = $('#emc-score');
+
             for (var i = 0; i < itemCount; i++) {
                 if (chosen[i] != settings.key[i]) {
                     wrong.push(i);
                 }
             }
+
             $quizItems.each(function (index) {
                 var $this = $(this);
                 if ($.inArray(index, wrong) !== -1) {
                     $this.removeClass('item-correct').addClass('item-incorrect');
+                    document.getElementById('notif' + index).style.display = "block";
+                    // $(".notification").hide();
                 } else {
                     $this.removeClass('item-incorrect').addClass('item-correct');
                 }
             });
 
-            score = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100 + "%";
+            scoreint = ((itemCount - wrong.length) / itemCount).toFixed(2) * 100;
+            score = scoreint + "%";
             $scoreEl.text("You scored a " + score).addClass('new-score');
             $('html,body').animate({ scrollTop: 0 }, 50);
-        }
 
+        }
     }
 }(jQuery));
 
