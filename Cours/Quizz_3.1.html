@@ -51,6 +51,7 @@
         Question!<button class="delete" type="button">Close</button></p>
 
     <p id="notif1" class="notification is-danger" role="alert">Erreur 2eme Question!<button class="delete" type="button">Close</button></p>
+
     <!--     
     <p id="notifsuccess" class="notification is-success" role="alert" style="display:none">Bravo! Tu peux passer au
         chapitre suivant, clique sur <a href="">ce lien</a><button class="delete" type="button">Close</button></p>
@@ -61,8 +62,45 @@
     <p id="notif1" class="notification is-danger" role="alert" style="display:none">Erreur 2eme Question!<button class="delete"
             type="button">Close</button></p>
     -->
-
-
+    <!-- 
+    <section class="add-new">
+        <label>
+            <input id="bulma-state" name="bulma" type="checkbox" checked>
+            Bulma CSS Enabled
+        </label>
+        <div class="level is-mobile">
+            <fieldset class="level-left level-item">
+                <legend class="heading">Behavior</legend>
+                <label>
+                    <input name="self-closing" type="radio" value="yes" checked>
+                    Self closing
+                </label>
+                <label>
+                    <input name="self-closing" type="radio" value="no">
+                    With close button
+                </label>
+            </fieldset>
+            <fieldset class="level-item">
+                <legend class="heading">Type</legend>
+                <label>
+                    <input name="notif-type" type="radio" value="info" checked>
+                    Info
+                </label>
+                <label>
+                    <input name="notif-type" type="radio" value="success">
+                    Success
+                </label>
+                <label>
+                    <input name="notif-type" type="radio" value="error">
+                    Error
+                </label>
+            </fieldset>
+            <div class="level-right">
+                <button id="add-new" type="button" class="button heading is-primary">Add new</button>
+            </div>
+        </div>
+    </section>
+-->
     <footer>
         <div id="emc-progress"></div>
     </footer>
@@ -77,7 +115,10 @@
         $(document.getElementById('notif' + 0)).hide();
         $(document.getElementById('notif' + 1)).hide();
     </script>
-
+    <script>
+        var notifications = new Notifications();
+        notifications.init();
+    </script>
 </body>
 
 </html>
