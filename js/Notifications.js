@@ -103,6 +103,7 @@
                     var t = this;
                     this.onload(), document.addEventListener("animationstart", function (e) {
                         t.onStartHandler(e)
+                        t.hide()
                     })
                 }
             }, {
