@@ -72,7 +72,6 @@
         }
 
         function scoreNormal() {
-
             var wrong = [],
                 score = null,
                 scoreint = 0;

@@ -41,17 +41,7 @@
         <div class="submit">
             <button id="emc-submit">Submit Answers</button>
         </div>
-        <button id="add-new" type="button" class="button heading is-primary">Add new</button>
     </div>
-
-    <p id="notifsuccess" class="notification is-success" role="alert">Bravo! Tu peux passer au
-        chapitre suivant, clique sur <a href="">ce lien</a><button class="delete" type="button">Close</button></p>
-
-    <p id="notif0" class="notification is-danger" role="alert">Erreur 1ere
-        Question!<button class="delete" type="button">Close</button></p>
-
-    <p id="notif1" class="notification is-danger" role="alert">Erreur 2eme Question!<button class="delete" type="button">Close</button></p>
-
     <!--     
     <p id="notifsuccess" class="notification is-success" role="alert" style="display:none">Bravo! Tu peux passer au
         chapitre suivant, clique sur <a href="">ce lien</a><button class="delete" type="button">Close</button></p>
@@ -101,23 +91,27 @@
         </div>
     </section>
 -->
+    <p id="notifsuccess" class="notification is-success" role="alert">Bravo! Tu peux passer au
+        chapitre suivant, clique sur <a href="">ce lien</a><button class="delete" type="button">Close</button></p>
+
+    <p id="notif0" class="notification is-danger" role="alert">Erreur 1ere
+        Question!<button class="delete" type="button">Close</button></p>
+
+    <p id="notif1" class="notification is-danger" role="alert">Erreur 2eme Question!<button class="delete" type="button">Close</button></p>
+
     <footer>
         <div id="emc-progress"></div>
     </footer>
 
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='js/Notifications.js'></script>
-    <script src="js/bulma.js"></script>
+    <script src='../js/Notifications.js'></script>
+    <script src="../js/bulma.js"></script>
     <script src="../js/Quizz_3.1.js"></script>
     <script src="../js/test.js"></script>
     <script type="text/javascript">
         $(document.getElementById('notifsuccess')).hide();
         $(document.getElementById('notif' + 0)).hide();
         $(document.getElementById('notif' + 1)).hide();
-    </script>
-    <script>
-        var notifications = new Notifications();
-        notifications.init();
     </script>
 </body>
 

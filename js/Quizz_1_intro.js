@@ -88,7 +88,7 @@
                 var $this = $(this);
                 if ($.inArray(index, wrong) !== -1) {
                     $this.removeClass('item-correct').addClass('item-incorrect');
-                    document.getElementById('notif' + index).style.display = "block";
+                    $(document.getElementById('notif' + index)).show();
                     // $(".notification").hide();
                 } else {
                     $this.removeClass('item-incorrect').addClass('item-correct');
