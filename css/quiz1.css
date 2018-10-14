@@ -80,7 +80,7 @@ section.item-incorrect {
 }
 section.item-incorrect:before {
   position: absolute;
-  z-index: 399;
+  z-index: 0;
   bottom: 0;
   right: 0;
   content: "";
@@ -92,7 +92,7 @@ section.item-incorrect:before {
 section.item-incorrect:after {
   line-height: 1.4;
   position: absolute;
-  z-index: 499;
+  z-index: 0;
   font-family: 'fontawesome';
   content: "";
   bottom: 0;
@@ -102,7 +102,7 @@ section.item-incorrect:after {
 }
 section.item-correct:before {
   position: absolute;
-  z-index: 399;
+  z-index: 0;
   bottom: 0;
   right: 0;
   content: "";
@@ -114,7 +114,7 @@ section.item-correct:before {
 section.item-correct:after {
   line-height: 1.4;
   position: absolute;
-  z-index: 499;
+  z-index: 0;
   font-family: 'fontawesome';
   content: "";
   bottom: 0;
